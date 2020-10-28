@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using Mirror;
 
-public class NetworkRoomPlayerLobby : MonoBehaviour
+public class NetworkRoomPlayerLobby : NetworkBehaviour
 {
 
 }
