@@ -8,6 +8,8 @@ public class PlayerNameInput : MonoBehaviour
     [SerializeField] private TMP_InputField nameInputField = null;
     [SerializeField] private Button continueButton = null;
 
+    public TextMeshProUGUI WelcomeText;
+
     public static string DisplayName { get; private set; }
     private const string PlayerPrefsNameKey = "PlayerName";
 
@@ -31,6 +33,7 @@ public class PlayerNameInput : MonoBehaviour
     public void SavePlayerName()
     {
         DisplayName = nameInputField.text;
+        WelcomeText.text = DisplayName;
         PlayerPrefs.SetString(PlayerPrefsNameKey, DisplayName);
     }
 }

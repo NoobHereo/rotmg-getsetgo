@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 public class NetworkManagerLobby : NetworkManager
 {
+
     [SerializeField] private int minPlayers = 2;
     [Scene] [SerializeField] private string menuScene = string.Empty;
 
