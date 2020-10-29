@@ -7,6 +7,7 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
 {
     [Header("UI")]
     [SerializeField] private GameObject lobbyUI = null;
+    [SerializeField] private Image[] classPortraits = new Image[4];
     [SerializeField] private TMP_Text[] playerNameTexts = new TMP_Text[4];
     [SerializeField] private TMP_Text[] playerReadyTexts = new TMP_Text[4];
     [SerializeField] private Button startGameButton = null;
@@ -73,7 +74,7 @@ public class NetworkRoomPlayerLobby : NetworkBehaviour
         }
 
         for (int i = 0; i < playerNameTexts.Length; i++)
-        {
+        {            
             playerNameTexts[i].text = "Waiting For Player...";
             playerReadyTexts[i].text = string.Empty;
         }
